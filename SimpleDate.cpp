@@ -73,7 +73,11 @@ string Date::serialize(){
 
 void Date::deserialize(string strSubDoc){
 
-    ;
+    CMarkup xml(strSubDoc);
+    xml.FindElem();
+
+    if(xml.FindElem("date"))
+        setDate(xml.GetData());
 }
 
 /****************************************/
