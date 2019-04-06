@@ -1,6 +1,7 @@
 #include <iostream>
 #include "UsersFile.h"
 #include "SimpleDate.h"
+#include "Money.h"
 
 using namespace std;
 
