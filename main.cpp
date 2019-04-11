@@ -1,35 +1,35 @@
 #include <iostream>
 #include "UsersFile.h"
-#include "SimpleDate.h"
-#include "Money.h"
+#include "TransactionsFile.h"
 
 using namespace std;
 
 int main(){
 
     Date currentDate;
-    string customDateString = "";
+    string customMoneyString = "";
 
     cout << "Dzisiaj jest " << currentDate.getDateAsString() << "." << endl;
 
-    while(true){
-        cout << "Podaj pierwsza date: ";
-        cin >> customDateString;
-        Date customDate1(customDateString);
+    /*
+        cout << "Podaj pierwsza kwote: ";
+        cin >> customMoneyString;
+        Money value1(customMoneyString);
 
-        cout << "Podaj druga date: ";
-        cin >> customDateString;
-        Date customDate2(customDateString);
+        cout << "Podaj druga kwote: ";
+        cin >> customMoneyString;
+        Money value2(customMoneyString);
 
-        if(customDate1 >= customDate2)
-            cout << "Pierwsza wieksza lub rowna." << endl;
+        if(value1 == value2)
+            cout << "Kwoty sa rowne." << endl;
         else
             cout << "Nieprawda." << endl;
 
-    }
+    /*
 
     /*********************/
 
+    /*
     vector<User> users;
 
     UsersFile usersFile("users.xml");
@@ -38,6 +38,19 @@ int main(){
 
     for(vector <User>::iterator itr = users.begin(); itr != users.end(); itr++){
         itr->view();
+    }
+    */
+
+    /*********************/
+
+    vector<Income> incomes;
+
+    TransactionsFile transactionsFile("incomes.xml");
+
+    incomes = transactionsFile.loadIncomesFromFile();
+
+    for(vector <Income>::iterator itr = incomes.begin(); itr != incomes.end(); itr++){
+        itr->printIncome();
     }
 
     return 0;

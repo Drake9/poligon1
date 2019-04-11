@@ -12,8 +12,8 @@ Money::Money(int amount){
     this->amount = amount * 100;
 }
 
-Money::Money(string amount){
-    setAmount(amount);
+Money::Money(string text){
+    setAmount(text);
 }
 
 /**----- GETTERS & SETTERS ------**/
@@ -36,7 +36,7 @@ void Money::setAmount(string text){
         }
     }
     if(pointPosition == -1)
-        amount = SupportiveMethods::convertStringToInt(text);
+        amount = SupportiveMethods::convertStringToInt(text) * 100;
     else{
         int majors = SupportiveMethods::convertStringToInt(text.substr(0,pointPosition));
         int minors = SupportiveMethods::convertStringToInt(text.substr(pointPosition+1));
@@ -138,4 +138,8 @@ Money operator / (const Money &money, const int &number){
 
 bool operator == (const Money &money1, const Money &money2){
     return (money1.amount == money2.amount);
+}
+
+Money & Money::operator = (const Money &money2){
+    this->amount = money2.amount;
 }

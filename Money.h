@@ -33,4 +33,5 @@ public:
     friend int operator / (const Money &money1, const Money &money2);
     friend Money operator / (const Money &money, const int &number);
     friend bool operator == (const Money &money1, const Money &money2);
+    Money &operator = (const Money &money2);
 };
