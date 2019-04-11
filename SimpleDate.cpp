@@ -83,7 +83,7 @@ void Date::deserialize(string strSubDoc){
 /****************************************/
 
 void Date::print(){
-    cout << endl << "date: " << year << "-" << month << "-" << day << endl;
+    cout << "date: " << year << "-" << month << "-" << day << endl;
 }
 
 bool Date::validateDate(int customYear, int customMonth, int customDay){
@@ -187,4 +187,10 @@ bool operator >= (const Date &date1, const Date &date2){
         return true;
     else
         return (date1 > date2);
+}
+
+Date & Date::operator = (const Date &date2){
+    this->year = date2.year;
+    this->month = date2.month;
+    this->day = date2.day;
 }

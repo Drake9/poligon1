@@ -343,33 +343,33 @@
     <coordinates>
       <x>1000</x>
       <y>380</y>
-      <w>70</w>
+      <w>100</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;40.0</additional_attributes>
+    <additional_attributes>10.0;10.0;80.0;40.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>720</x>
       <y>380</y>
-      <w>120</w>
+      <w>130</w>
       <h>330</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>100.0;10.0;10.0;90.0;10.0;310.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;100.0;10.0;310.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>800</x>
       <y>380</y>
-      <w>120</w>
+      <w>130</w>
       <h>250</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>100.0;10.0;10.0;230.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;100.0;10.0;230.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>

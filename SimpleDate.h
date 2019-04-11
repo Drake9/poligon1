@@ -40,4 +40,5 @@ public:
     friend bool operator > (const Date &date1, const Date &date2);
     friend bool operator <= (const Date &date1, const Date &date2);
     friend bool operator >= (const Date &date1, const Date &date2);
+    Date &operator = (const Date &date2);
 };
